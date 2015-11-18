@@ -1,0 +1,17 @@
+ghost:
+  build: ./ghost
+  volumes:
+    - /var/data/blog:/var/lib/ghost
+  expose:
+    - "2368"
+  restart: always
+  environment:
+    - URL=http://blog.example.com
+
+nginx:
+  build: ./nginx/
+  ports:
+    - "80:80"
+  links:
+    - ghost:ghost
+  restart: always
