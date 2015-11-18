@@ -2,6 +2,11 @@
 
 Pretty basic example of using docker compose to deploy a NodeJS into a very simple production environment.
 
+We are deploying:
+
+* [Ghost](https://ghost.org/) blogging platform
+* [nginx](http://nginx.org/en/) web server
+
 # setup
 
 We are going to deploy this host using docker-machine, using the Digital Ocean service to host our server.
